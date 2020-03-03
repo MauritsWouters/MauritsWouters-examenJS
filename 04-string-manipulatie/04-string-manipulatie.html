@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>04-string-manipulatie</title>
+  </head>
+  <body>
+    <script>
+      //deel1
+      var voornaam = "Maurits";
+      var achternaam = "Wouters";
+      var naam = voornaam + " " + achternaam;
+      document.write("Hallo " + naam);
+
+      //deel2
+      var characters = naam.length - 1;
+      //Ik heb -1 gedaan omwille van de spatie.
+      document.write("<br> Jouw naam bevat " + characters + " karakters.");
+
+      //deel3
+      var filename = "javaScriptFrameWork";
+      document.write('<br> De originele filename is: "' + filename + '"');
+
+      //deel4
+
+      var kleineLetters = filename.toLowerCase();
+      document.write(
+        '<br> De filename kan beter in kleine letters getypt worden, dus: "' +
+          kleineLetters +
+          '".'
+      );
+
+      //deel5
+      var framework = kleineLetters.slice(10, 19);
+      var javascript = kleineLetters.slice(0, 10);
+
+      document.write(
+        '<br> Als je "' +
+          kleineLetters +
+          '" opsplitst, krijg je : "' +
+          javascript +
+          '" en "' +
+          framework +
+          '".'
+      );
+
+      //deel6
+      var karakter = kleineLetters.charAt(5);
+      document.write(
+        '<br>Het zesde karakter (volgens mensen) in "' +
+          kleineLetters +
+          '" is: "' +
+          karakter +
+          '".'
+      );
+    </script>
+  </body>
+</html>
