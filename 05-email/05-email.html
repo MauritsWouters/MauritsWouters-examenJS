@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>05-email</title>
+  </head>
+  <body>
+    <script>
+      //deel1
+      var email = "jan.klaassen@mail.com";
+      // test: var email = "maurits.wouters@gmail.com";
+      var at = email.indexOf("@");
+      document.write('<br>In "' + email + '" staat de @ op positie: ' + at);
+
+      //deel2
+      var naam = email.substring(0, at);
+
+      //deel3
+      document.write(
+        '<br>Resultaat: <br> De naam is: "' +
+          naam +
+          '" <br> In "' +
+          email +
+          '" staat de @ op positie: ' +
+          at
+      );
+    </script>
+  </body>
+</html>
