@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>08-woord-vervangen</title>
+  </head>
+  <body>
+    <form name="formulier">
+        <h1>Vervang het woord</h1>
+        <p>Zin:</p>
+        <input type="text" id="myText1" value =""></input>
+        <p>Zoek dit woord:
+        <input type="text" id="myText2" value =""></input></p>
+        <p>Dit woord komt in de plaats: 
+        <input type="text" id="woordVervangen" value =""></input></p>
+        <p><input type="button" value="Vervang" onclick="vervangWoord()"></p>
+        <p>De nieuwe zin: 
+        <input name="resultaat" size=50></input></p>
+    </form>
+
+    <script>
+        
+      function vervangWoord() {
+        var zin = document.getElementById("myText1").value;
+        //document.getElementById("demo").innerHTML = x;
+        var woord = document.getElementById("myText2").value;
+        var nieuwWoord = document.getElementById("myText3").value;
+
+        //var zin = prompt("?");
+        //var woord = prompt("??");
+        //var nieuwWoord = prompt("??");
+        if (zin.indexOf(woord) != -1) {
+          var nieuweTekst =
+            zin.substring(0, zin.indexOf(woord)) +
+            nieuwWoord +
+            zin.substring(zin.indexOf(woord) + woord.length, zin.length);
+          document.write("<p>" + nieuweTekst + "</p>");
+        } else {
+          document.write("<p>Dit woord is niet gevonden!</p>");
+        }
+      }
+
+      vervangWoord();
+      
+    </script>
+  </body>
+</html>
